@@ -7,9 +7,9 @@ class MachineTranslation():
         self.text = text
     
     def english_to_french(self):
-        translate = translator.translate(text=[self], model_id="en-fr")
-        return translate.result['translations'][0]['translation']
+        result = translator.translate(text=[self], model_id="en-fr").get_result()
+        return result['translations'][0]['translation']
     
     def french_to_english(self):
-        translate = translator.translate(text=[self], model_id="fr-en")
-        return translate.result['translations'][0]['translation']
+        result = translator.translate(text=[self], model_id="fr-en").get_result()
+        return result['translations'][0]['translation']
