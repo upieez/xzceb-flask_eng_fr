@@ -104,6 +104,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+ibm-credentials.env
 env/
 venv/
 ENV/
